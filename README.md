@@ -15,7 +15,7 @@ Create a income and expense program that can do 2 main things, View a profit and
 by Pathompong Phongsaporamut, Sai, Williams Sissoko
 
 
-  # Running the program
+  # Running program
 
   - git clone repository
   - Make sure you have Java installed
