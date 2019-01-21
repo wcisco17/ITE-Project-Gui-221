@@ -20,4 +20,4 @@ by Pathompong Phongsaporamut, Sai, Williams Sissoko
   - git clone repository
   - Make sure you have Java installed
   - run `javac ExpenseHelper.java`
-  - lastly, run `java Expense`
+  - lastly, run `java ExpenseHelper`
