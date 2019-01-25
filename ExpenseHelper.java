@@ -87,11 +87,17 @@ public static void input() throws FileNotFoundException {
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
 				null, daysOption, null);
 		//day
-		// do {
 			panel.add(new JLabel("Enter number between 0 and 31"));
 			JTextField textField = new JTextField(10);
+			
+			
+			
+			
 			panel.add(textField);
 
+// 			Making sure user does no exceed past 31..
+			do {
+				
 			 day = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
 					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
 					null, null, null);
@@ -99,6 +105,7 @@ public static void input() throws FileNotFoundException {
 					if (day == JOptionPane.YES_OPTION){
 						JOptionPane.showMessageDialog(null, textField.getText());
 					}
+			} while (Integer.parseInt(textField.getText()) >= 31);
 		
 		
 		//year
