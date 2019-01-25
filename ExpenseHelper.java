@@ -65,7 +65,7 @@ public class ExpenseHelper {
 	 
 }
 	// Method for input
-public static int input() throws FileNotFoundException {
+public static void input() throws FileNotFoundException {
 		
 		//variable
 		int inputmenu;
@@ -74,6 +74,7 @@ public static int input() throws FileNotFoundException {
 		//int month;
 		int year;
 		String filename ="";
+
 
 
 		Object[] daysOption = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
@@ -118,32 +119,41 @@ public static int input() throws FileNotFoundException {
 
 		//define filename
 		filename = Output.padLeft(textField.getText(), 2) + daysOption[month] + yearTextField.getText();
+		
+		
+		try {
+			
 			
 		// //menu to call input methods
 		do {
+			Helper.error = false;
 			System.out.println("What is your input type?");
 			System.out.println("1. Income");
 			System.out.println("2. Expense");
 			System.out.println("3. Back to main menu");
 			System.out.println("Please put 1, 2, or 3");
 			inputmenu = Helper.scan.nextInt();
+			//Switch case to navigate menu
 		} while (inputmenu!=1 && inputmenu!=2 && inputmenu!=3);
 		
-		//Switch case to navigate menu
-        switch (inputmenu) {
-        case 1:
-        	Statement.income(filename);
-            return (1);
-        case 2:
-        	Statement.expense(filename);
-            return (1);
-        case 3:
-            return (1);
-        default:
-            System.out.println("Invalid Menu Number"); //prevent other input
-            return (1);
-        }
-		
+			switch (inputmenu) {
+			case 1:
+				Statement.income(filename);
+				return;
+			case 2:
+				Statement.expense(filename);
+				return;
+			case 3:
+				return;
+			default:
+				System.out.println("Invalid Menu Number"); //prevent other input
+				return;
+			}
+		} catch (Exception e) {
+			Helper.out("Program terminated Please enter the right Input... Exp: Number");
+			Helper.error = true;
+		}
+	        
 	}
 	
 
