@@ -21,3 +21,8 @@ by Pathompong Phongsaporamut, Sai, Williams Sissoko
   - Make sure you have Java installed
   - run `javac ExpenseHelper.java`
   - lastly, run `java ExpenseHelper`
+
+
+# Todo 
+  - Finishing up the GUI
+  - try and catch errors
